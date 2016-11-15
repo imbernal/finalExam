@@ -1,0 +1,17 @@
+#finalexam{
+	cursor: pointer;
+}
+
+#btnSubmit2{
+	cursor: pointer;
+}
+
+#contactform2{
+	display: none;
+}
+
+.modal-content{
+	height: 100px;
+	text-align: center;
+	padding-top: 14px;
+}

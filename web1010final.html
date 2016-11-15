@@ -8,6 +8,7 @@
 		<link rel="shortcut icon" href="images/ico/favicon.png">
 		<link href="images/ico/favicon.ico" rel="shortcut icon" type="image/x-icon">
 		<link href="images/ico/favicon.ico" rel="icon" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		
 		<!-- Site Title  -->
 		<title>FVI | WEB AND APPLICATION DEVELOPMENT ENGINEER</title>
@@ -267,7 +268,7 @@
 					<div class="row text-center">
 						<div class="col-xs-4 col-xs-push-4 button" id="finalexam">LEARN MORE</div>
             <div id="thehidingform">
-              <form onsubmit="event.preventDefault();" id="contactform2" name="contactform2" class="contact-form text-center" role="form" method="POST">
+              <form onsubmit="event.preventDefault();" id="contactform2" name="contactform2" class="contact-form text-center" role="form" action="http://fvi-grad.com:4004/fakeform" method="POST">
                     						
                     <input id="cf-name" type="text" name="cf-name" placeholder="Your Full Name">
                     <input id="cf-email" type="email" name="Email" placeholder="Your Email">
@@ -305,6 +306,15 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  			<div class="modal-dialog modal-sm" role="document">
+    			<div class="modal-content">
+     				<h4>Congratulations!</h4>
+     				<p>Your message was sent</p>
+    			</div>
+  			</div>
+		</div>
 		
 		<!-- Bootstrap core JavaScript
 		================================================== -->
@@ -328,6 +338,7 @@
 		<!-- jQuery Custom
 		================================================== -->
 		<script src="http://explore.fvi.edu/js/custom.js" type="text/javascript"></script>
+		<script type="text/javascript" src="custom.js"></script>
 	
 
 </body></html>
