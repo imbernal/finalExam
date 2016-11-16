@@ -1,0 +1,31 @@
+Israel Bernal: WEB1010 Final Exam
+
+Part 1: 75/75 pts
+Notes: Good use of modals, the done and fail methods for $.ajax, $(this), toggle,
+and jQuery variable caching (saving jQuery selections into variables). However,
+you could improve your code by declaring a separate function for your submit
+button callback, and then putting the name of the function as the handler, like
+this:
+
+$('#btnSubmit2').click(onSubmitClick);
+
+function onSubmitClick() {
+    ...
+}
+
+The code above is better for debugging because it can tell you the name of the
+function with the error ('onSubmitClick') and because it is easier to ready quickly,
+with the option to look at the function if desired. You can put all your different
+event handlers one line after the other, like this:
+
+$('#btnSubmit2').click(onSubmitClick);
+$('#formDiv').click(hideForm);
+$('input').focus(addRedBorder);
+$('.special').hover(listOfSpecialThings);
+
+
+Part 2: 67/75 pts +4 pts extra credit = 71/75 pts.
+Notes: See your web1010final.js file. Each question has been graded and some have
+feedback with the grade.
+
+Total grade: 75 + 71 = 146/150. 97%. A+

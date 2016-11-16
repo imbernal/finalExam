@@ -2,7 +2,7 @@
 //Find the error in the following for loop:
 
 
-for (var i = 0; i < '5'; i++) {
+for (var i = 0; i < '5'; i++;) {
  console.log('i');
 }
 
@@ -12,22 +12,26 @@ for (var i = 0; i < '5'; i++) {
 for (var i = 0; i < 5; i++) {
  console.log('i');
 }
+// 5/5 pts. But the 5 in i < 5 does not have to be a number. It works if 5 is a
+// string too. for (var i = 0; i < '423'; i++) {} will run 423 times
 
 
 //Question 1.2
 //Find the error in the following conditional:
- if (false) {
+ if false {
    consola.log("hello")
  }else{
    console.log("hasta luego")
  }
 
- //Answer: 
+ //Answer:
  if (false) {
    console.log("hello")
  }else{
    console.log("hasta luego")
  }
+// 5/5 pts
+
 
 //Question 1.3
 //Find the error in the following code:
@@ -37,11 +41,13 @@ if (x > 10){
 }
 
 //Answer:
-
 var x = 15;
 if (x > 10){
    console.log("x is greater than ten");
 }
+// 5/5 pts
+
+
 
 //Question 1.4
 //Find the error in the following code:
@@ -53,6 +59,10 @@ if y === 27
 var y = 27;
 if (y === 27)
   console.log(y);
+// 5/5 pts. In case you didn't know, JavaScript will run only the very next
+// statement after an if statement if curly brackets are not included.
+
+
 
 //Question 2.1
 //What does will the console output when the following is entered.
@@ -64,6 +74,9 @@ if (y === 27)
 //d. 11
 
 //Answer: c
+// 5/5 pts
+
+
 
 //Question 2.2
 //Find the errors in the following
@@ -72,7 +85,10 @@ var time =3
 
 //name"+ said "He's comming late.", the meetin is still at " + time +
 
-//answer: name + " said He's comming late, the meeting is still at "+ time +".");
+//answer:
+name + " said He's comming late, the meeting is still at "+ time +".");
+// 5/5 pts
+
 
 //Question 2.3
 //What is the value of x?
@@ -83,6 +99,9 @@ var c = 10;
 var x = b*c + a;
 
 //Answer: 50thug life
+// 5/5 pts
+
+
 
 //Question 2.4
 //What is the value of x?
@@ -92,7 +111,11 @@ x = x*y;
 var z = 4;
 x = x*z;
 
-//Answer x=240
+//Answer:
+x=240
+// 5/5 pts
+
+
 
 
 //Question 3.1
@@ -101,14 +124,19 @@ var firstName = "John"
 var lastName = "Martinez"
 var city = "Miami"
 
-//Answer firstName + " " + lastName + " work in " + city
+//Answer:
+firstName + " " + lastName + " works in " + city
+// 5/5 pts
+
 
 
 //Question 3.2
 //Write a sentence that uses the following variables
 var totalPower = 32
 var generator = 1
-//Answer generator + " Generator has a total power of " + totalPower
+//Answer:
+generator + " Generator has a total power of " + totalPower
+// 5/5 pts
 
 
 
@@ -120,6 +148,10 @@ var str2 = "sup dawg";
 var str3 = str1+"is similar to"+str2+" in spanish.";
 
 //Answer: que bola acereis similar tosup dawg in spanish.
+// 5/5 pts
+
+
+
 
 //Question 3.4
 //Use console.log to output the statement: "Hi! My name is Slim Shady." using the following two variables:
@@ -128,6 +160,10 @@ var name = "Slim Shady";
 
 //Answer:
 console.log(greeting + " " + name + ".");
+// 3/5 pts. Correct answer:
+console.log(greeting + " My name is " + name + ".");
+
+
 
 //Question 4
 /*
@@ -157,10 +193,27 @@ for(var i = 1 ; i <=12 ; i++){
 
 	money *=i+interest;
 	stringMoneyToShow = money;
-	console.log( "At the end of year " + i + ", you have " + "$" + stringMoneyToShow.toFixed(2)  ); 
+	console.log( "At the end of year " + i + ", you have " + "$" + stringMoneyToShow.toFixed(2)  );
 }
+// 2/5 pts. Output is incorrect, but you some things correctly. (Good use of toFixed).
+// One way to get the correct output is like this:
+var money = 1000;
+var interest = 0.05;
+var years = 30;
+for(var i = 1; i <= 12 ; i++){
+	money *= (interest + 1);
+	console.log( "At the end of year " + i + ", you have " + "$" + money.toFixed(2)  );
+}
+// Output:
+// At the end of year 1, you have $1050.00
+// At the end of year 2, you have $1102.50
+// At the end of year 3, you have $1157.63
+// ...
 
-//Extra credit
+
+
+
+// Question 5.1
 /*
 Dadas tres variables, escriba un programa que muestre (en la consola) "Usted debe comprar un carro nuevo" solamente si la eddad del carro que tiene (carAge) es mayor que 10, el millaje (mileage) es mayor que 150,000, y si la marca es Kia. De otra manera, su programa debe mostrar "Espere un poco, sea frugal."
 
@@ -179,6 +232,12 @@ if (  carAge > 10 && mileage > 150000 && brand=="Kia"){
 else{
   console.log("Hold off a bit, be frugal.");
 }
+// 5/5 pts. Note: 'Kia' != 'kia' because K (uppercase) is keycode 75 and
+// k (loweracse) is keycode 107. Good job keep the case the same. You could
+// also do it like this:
+if (carAge > 10 && mileage > 150000 && brand.toLowerCase() == "kia") {}
+
+
 
 
 //Question 5.2
@@ -206,6 +265,25 @@ for (var i = 1; i <= totalPools ; i++ ) {
 
 console.log("The total of galon are " + totalVolume);
 
+// 2/5 pts. Your output is incorrect, but you did some things correctly. This
+// is one way to get the correct output:
+var totalPools = 12
+var currentPool = 1
+var smallVolume = 1000
+var largeVolume = 3000
+var totalVolume = 0
+for(currentPool; currentPool <= totalPools; currentPool++) {
+    if(currentPool <= 7) {
+        totalVolume += smallVolume;
+    }
+    else {
+        totalVolume += largeVolume;
+    }
+}
+// Output should be 22,000
+
+
+
 
 // Extra Credit
 // Este dia las picsinas numero 2 y 10 no trabajan,
@@ -226,6 +304,43 @@ for ( var i = 1; i <= totalPools ; i++ ) {
 }
 
 console.log("The total of galon are " + totalVolume);
+// +2 pts. Again, your output is wrong, but you did some things correctly.
+// Here is one way to get the correct output:
+var totalPools = 12
+var currentPool = 1
+var smallVolume = 1000
+var largeVolume = 3000
+var totalVolume = 0
+for(currentPool; currentPool <= totalPools; currentPool++) {
+    if(currentPool <= 7 && currentPool != 2) {
+        totalVolume += smallVolume;
+    }
+    else if(currentPool > 7 && currentPool != 10) {
+        totalVolume += largeVolume;
+    }
+}
+// Even better, like this:
+var totalPools = 12
+var currentPool = 1
+var smallVolume = 1000
+var largeVolume = 3000
+var totalVolume = 0
+for(currentPool; currentPool <= totalPools; currentPool++) {
+    if(currentPool === 2 || currentPool === 10) {continue}
+    // 'continue' breaks from the current iteration and continues on
+    // to the next iteration
+    if(currentPool <= 7) {
+        totalVolume += smallVolume;
+    }
+    else {
+        totalVolume += largeVolume;
+    }
+}
+// Output will be 18,000
+
+
+
+
 
 //Extra Credit
 /*
@@ -262,4 +377,23 @@ for ( var i = 1; i <= totalPools ; i++ ) {
 
 console.log("The total of galon are " + totalVolume);
 
-
+// +2 pts. You did some things correctly, but your output is incorrect.
+// Here is one way to get the correct answer:
+var totalPools = 12
+var currentPool = 1
+var smallVolume = 1000
+var largeVolume = 3000
+var totalVolume = 0
+for(currentPool; currentPool <= totalPools; currentPool++) {
+    if(currentPool === 2 || currentPool === 6 || currentPool === 10) {continue}
+    if(currentPool <= 7) {
+        totalVolume += smallVolume;
+    }
+    else if(currentPool === 12) {
+        totalVolume += largeVolume / 2;
+    }
+    else {
+        totalVolume += largeVolume;
+    }
+}
+// Output will be 15,500
